@@ -1,0 +1,14 @@
+torch==2.5.1
+torchaudio 
+torchvision
+laion-clap 
+librosa 
+soundfile 
+dasp_pytorch 
+julius 
+pyloudnorm 
+torchlibrosa
+torchlpc>=0.4
+torchcomp 
+numba-cuda==0.4.0 
+pynvjitlink-cu12

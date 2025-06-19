@@ -1,0 +1,10 @@
+__pycache__
+*.egg-info
+wrapup/
+wandb/
+exp_logs/
+eval_data/
+test_pip.py 
+ckpts/
+dist/
+build/
