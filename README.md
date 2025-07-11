@@ -107,3 +107,19 @@ We develop a retrieval-based evaluation pipeline (Using MUSDB dataset as the exa
 
 ## LICENSE 
 This library is released under the CC BY-NC 4.0 license. Please refer to the LICENSE file for more details.
+
+
+## Citation
+
+Please cite our work if you find it useful:
+
+```bibtex
+@INPROCEEDINGS{yeh2025fx, 
+  title={Fx-Encoder++: Extracting Instrument-Wise Audio Effects Representations from Mixtures}, 
+  author={Yeh, Yen-Tung and Koo, Junghyun and Mart{\'\i}nez-Ram{\'\i}rez, Marco A and Liao, Wei-Hsiang and Yang, Yi-Hsuan and Mitsufuji, Yuki}, 
+  booktitle={The 26th International Society for Music Information Retrieval Conference (ISMIR)},  
+  year={2025},
+}
+```
+
+
