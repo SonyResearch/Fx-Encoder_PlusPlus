@@ -2,6 +2,9 @@
 
 Convert audio effects from your music into encoded representations suitable for audio effects processing and analysis tasks.
 
+[Paper](https://arxiv.org/abs/2507.02273)
+[HugginFace](https://huggingface.co/yytung/fxencoder-plusplus)
+
 ## About Fx-Encoder++ 
 We adopt the codebase of [CLAP](https://github.com/LAION-AI/CLAP) for this project.
 
@@ -40,6 +43,10 @@ wav = torch.from_numpy(wav).unsqueeze(0).unsqueeze(0).repeat(1, 2, 1).to(DEVICE)
 
 fx_emb = model.get_fx_embedding(wav)
 print(fx_emb.shape) # [1, embed_dim], [1, 128]
+
+## if you want to get the embedding before projection, then 
+fx_emb = model.get_fx_embedding(wav, normalized=False)
+print(fx_emb.shape) # [1, embed_dim], [1, 2048]
 ```
 
 Extract instrument-specific audio effects representations from mixture tracks. For example, extract the audio effects representation of just the vocals within a full mix. 

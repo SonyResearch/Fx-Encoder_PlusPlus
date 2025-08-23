@@ -382,6 +382,12 @@ class FxEncoderPlusPlus(nn.Module):
         fx_emb = F.normalize(fx_emb, dim=-1)
         return fx_emb
     
+    def get_fx_embedding_pre_proj(self, x, normalized = True):
+        fx_emb = self.fx_encoder(x)["embedding"]
+        if normalized:
+            fx_emb = F.normalize(fx_emb, dim=-1)            
+        return fx_emb
+    
     def get_fx_embedding_by_audio_query(self, x, audio_query):
         # mixture fx embedding 
         fx_mixture_emb = self.fx_encoder(x) 
@@ -406,6 +412,7 @@ class FxEncoderPlusPlus(nn.Module):
         fx_stem_emb = F.normalize(fx_stem_emb, dim=-1)
         return fx_mixture_emb, fx_stem_emb
     
+
     def forward(
         self, 
         mixture_a, 
